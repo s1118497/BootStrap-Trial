@@ -8,10 +8,9 @@
 		<!--	留意！	
 		ERROR:	瀏覽器不容許載入 url不是＂http, data, chrome, chrome-extension, chrome-untrusted, https.＂的開頭, 會出現 "from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, chrome-untrusted, https." Error
 		
-		解決方法:	1) 必須要安裝localhost server/網上server 再去引用 bootstrap.min.css 和 bootstrap.bundle.min.js
-					2) -這裡用VSCode的"Live Server"插件作為localhost server, 並將所需文件 
-							(bootstrap.min.css 和 bootstrap.bundle.min.js)放到和.html同一目錄(root根目錄)
-								再以http://127.0.0.1:5500 (localhost) 作引用地址
+		解決方法:	1) 必須要以localhost server/web server去host Bootstrap的JS和CSS檔案。當browser render網頁時, 會同時問server下載相關Bootstrap檔案
+					2) 這裡用VSCode的"Live Server"插件作為localhost server, 並將所需文件 
+							(bootstrap.min.css 和 bootstrap.bundle.min.js)放到和.html同一目錄(root根目錄)去引用
 		詳情參考: 1)	https://blog.csdn.net/KateCateCake/article/details/79045211
 				2)	https://www.youtube.com/watch?v=nx8E5BF0XuE
 
@@ -19,7 +18,7 @@
 
 		<!--引用bootstrap css-->
 		<link
-			href="http://127.0.0.1:5500/bootstrap.min.css"
+			href="bootstrap.min.css"
 			rel="stylesheet"
 			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 			crossorigin="anonymous"
@@ -55,7 +54,7 @@
 		</div>
 
 		<script
-			src="http://127.0.0.1:5500/bootstrap.bundle.min.js"
+			src="bootstrap.bundle.min.js"
 			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 			crossorigin="anonymous"
 		></script>
