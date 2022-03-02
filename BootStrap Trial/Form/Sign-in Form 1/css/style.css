@@ -1,0 +1,23 @@
+* {
+	box-sizing: border-box;
+	/* 
+        預設計算元素總寬高方式是"content-box", 即實際寬高會加上padding和border
+        "border-box"表示, padding和border都計算在內, 即實際寬高就是width/height
+        參考: https://www.w3schools.com/css/css3_box-sizing.asp
+    */
+	padding: 0;
+}
+body {
+	background: url(../img/bg.jpeg);
+}
+
+button[type="submit"] {
+	margin-bottom: 20px;
+	position: relative;
+	left: 50%;
+	margin-left: -38.525px;
+	/* center a children element: https://stackoverflow.com/questions/9998260/css-absolute-position-wont-work-with-margin-leftauto-margin-right-auto */
+}
+form.g-2 {
+	box-shadow: 0 20px 100px -30px silver;
+}
